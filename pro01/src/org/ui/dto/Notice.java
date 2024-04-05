@@ -1,6 +1,7 @@
 package org.ui.dto;
 
 public class Notice {
+	private int no;
 	private String title;
 	private String contents;
 	private String resdate;
@@ -8,13 +9,20 @@ public class Notice {
 	private int visited;
 	
 	public Notice() {}
-	public Notice(String title, String contents, String resdate, String author, int visited) {
+	public Notice(int no, String title, String contents, String resdate, String author, int visited) {
 		super();
+		this.no = no;
 		this.title = title;
 		this.contents = contents;
 		this.resdate = resdate;
 		this.author = author;
 		this.visited = visited;
+	}
+	public int getNo() {
+		return no;
+	}
+	public void setNo(int no) {
+		this.no = no;
 	}
 	public String getTitle() {
 		return title;
@@ -48,7 +56,7 @@ public class Notice {
 	}
 	@Override
 	public String toString() {
-		return "Notice [title=" + title + ", contents=" + contents + ", resdate=" + resdate + ", author=" + author
+		return "Notice [no=" + no +", title=" + title + ", contents=" + contents + ", resdate=" + resdate + ", author=" + author
 				+ ", visited=" + visited + "]";
 	}
 	
