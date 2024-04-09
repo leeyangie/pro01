@@ -3,18 +3,20 @@ package org.ui.dto;
 public class Member {
 	private String name;
 	private String id;
-	private String varchar;
+	private String pw;
 	private int birth;
 	private String address;
+	private String tel;
 	
 	public Member() {}
-	public Member(String name, String id, String varchar, int birth, String address) {
+	public Member(String name, String id, String pw, int birth, String address, String tel) {
 		super();
 		this.name = name;
 		this.id = id;
-		this.varchar = varchar;
+		this.pw = pw;
 		this.birth = birth;
 		this.address = address;
+		this.tel = tel;
 	}
 	public String getName() {
 		return name;
@@ -28,11 +30,11 @@ public class Member {
 	public void setId(String id) {
 		this.id = id;
 	}
-	public String getVarchar() {
-		return varchar;
+	public String getPw() {
+		return pw;
 	}
-	public void setVarchar(String varchar) {
-		this.varchar = varchar;
+	public void setPw(String pw) {
+		this.pw = pw;
 	}
 	public int getBirth() {
 		return birth;
@@ -46,11 +48,20 @@ public class Member {
 	public void setAddress(String address) {
 		this.address = address;
 	}
+	public String getTel() {
+		return tel;
+	}
+	public void setTel(String tel) {
+		this.tel = tel;
+	}
 	@Override
 	public String toString() {
-		return "Member [name=" + name + ", id=" + id + ", varchar=" + varchar + ", birth=" + birth + ", address="
-				+ address + "]";
+		return "Member [name=" + name + ", id=" + id + ", pw=" + pw + ", birth=" + birth + ", address=" + address
+				+ ", tel=" + tel + "]";
 	}
-
+	
+	
 	
 }
+	
+	
