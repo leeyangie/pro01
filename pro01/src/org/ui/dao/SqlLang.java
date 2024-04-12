@@ -15,4 +15,13 @@ public interface SqlLang {
 	String INS_MEMBER = "insert into member values(?,?,?,?,?)";
 	String UPD_MEMBER = "update member set pw=?,name=?,email=?,tel=? where id=?";
 	String DEL_MEMBER = "delete from member where id=?";
+	
+	String SELECT_QNA_BYNO = "select * from";
+	String SELECT_ALL_QNA = "select *from qna order by parno desc, plevel asc";
+	String DEL_ANSWER = "delet from qna where no=?";
+	String DEL_QUESTION = "delet from qna where parno=?";
+	String VISITED_UPD_QNA = null;
+	String UPD_QNA = null;
+	
+
 }

@@ -94,6 +94,8 @@ public class NoticeDAO {
 		return cnt;
 	}
 	
+	
+	
 	public int editProNotice(Notice noti) {
 		int cnt = 0;
 		MySQLDB mysql = new MySQLDB();

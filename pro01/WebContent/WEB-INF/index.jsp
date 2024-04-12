@@ -5,15 +5,16 @@
 <c:set var="path0" value="<%=request.getContextPath() %>" />    
 <!DOCTYPE html>
 <html>
+
 <head>
 <meta charset="UTF-8">
 <title>${title }</title>
 <%@ include file="/head.jsp" %>
 <style>
-.container { width:1400px; }
+.container { width:100% }
 .page { clear:both; height:100vh; }
-#page1 { background-color:#ececec; }
-#page2 { background-color:#42bcf5; }
+#page1 { background-color:#f7f7f2; }
+#page2 { background-color:#04331c; }
 .page_title { font-size:36px; padding-top:2em; text-align:center; }
 </style>
 </head>
@@ -22,18 +23,40 @@
 	<%@ include file="/header.jsp" %>
 </div>
 <div id="contents">
-	<h2>콘텐츠 영역</h2>
 	<section class="page" id="page1">
-		<div style="width:1400px; margin:0 auto;">
+	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+	  <ol class="carousel-indicators">
+	    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+	    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+	    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+	  </ol>
+	  <div class="carousel-inner">
+	    <div class="carousel-item active">
+	      <img class="d-block w-100" src="${path0 }/images/2795083_image2_1.jpg" alt="First slide">
+	    </div>
+	    <div class="carousel-item">
+	      <img class="d-block w-100" src="${path0 }/images/419image.jpg" alt="Second slide">
+	    </div>
+	    <div class="carousel-item">
+	      <img class="d-block w-100" src="${path0 }/images/view.png" alt="Third slide">
+	    </div>
+	  </div>
+	  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+	    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	    <span class="sr-only">Previous</span>
+	  </a>
+	  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+	    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+	    <span class="sr-only">Next</span>
+	  </a>
+	</div>
+		<div style="width:100%; margin:0 auto;">
 			<h3 class="page_title">제작자 : ${author }</h3>
 		</div>
 	</section>
 	<section class="page" id="page2">
-		<div style="width:1400px; margin:0 auto;">	
-			<h3 class="page_title">임시 서버 애플리케이션 디렉토리 : ${realPath }</h3>
-			<h3>main 프로젝트 디렉토리 : ${path0 }</h3>
-			<h3>head 프로젝트 디렉토리 : ${ipath }</h3>
-			<h3>header 프로젝트 디렉토리 : ${hpath }</h3>
+		<div style="width:1200px; margin:0 auto;">	
+			
 		</div>	
 	</section>	
 </div>

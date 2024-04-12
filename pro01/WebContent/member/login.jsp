@@ -13,7 +13,7 @@
 .container { width:1400px; }
 .page { clear:both; height:100vh; }
 #page1 { background-color:#f7f7f2; }
-#page2 { background-color:#2d3619; }
+#page2 { background-color:#42bcf5; }
 .page_title { font-size:36px; padding-top:2em; text-align:center; }
 </style>
 </head>
@@ -23,44 +23,35 @@
 </div>
 <div id="contents">
 	<section class="page" id="page1">
+		<c:if test="${not empty msg}">
+		<div style="width:1400px; margin:0 auto;">${msg }</div>
+		</c:if>
 		<div style="width:1400px; margin:0 auto;">
-			<h3 class="page_title">공지사항 목록</h3>
-			<div>
-				<table class="table table-striped">
-					<thead>
-						<tr>
-							<th class="item1">번호</th>
-							<th class="item2">제목</th>
-							<th class="item3">작성일</th>
-							<th class="item4">작성자</th>
-							<th class="item5">조회수</th>
-						</tr>
-					</thead>
+			<h3 class="page_title">로그인</h3>
+			<form action="${path0 }/LogInPro.do" method="post">
+				<table class="table">
 					<tbody>
-						<c:forEach var="dto" items="${notiList }">
 						<tr>
-							<td>${dto.no }</td>
+							<th><label for="id">아이디</label></th>
 							<td>
-								<a href="${path0 }/GetNotice.do?no=${dto.no }">${dto.title }</a>
+								<input type="text" name="id" id="id" class="form-control" required>
 							</td>
-							<td>${dto.resdate }</td>
-							<td>${dto.author }</td>
-							<td>${dto.visited }</td>
 						</tr>
-						</c:forEach>
+						<tr>
+							<th><label for="pw">비밀번호</label></th>
+							<td>
+								<input type="password" name="pw" id="pw" class="form-control" required>
+							</td>
+						</tr>
 					</tbody>
 				</table>
-				<div class="btn-group" role="group" aria-label="Basic example">
-  				<a href="${path0 }/notice/noti_ins.jsp" class="btn btn-dark">글 등록</a>
+				<hr>
+				<div class="btn-group">
+				  <button type="submit" class="btn btn-secondary">로그인</button>
+				  <button type="reset" class="btn btn-secondary">취소</button>
 				</div>
-			</div>
+			</form>
 		</div>
-	</section>
-	<section class="page" id="page2">
-		<div style="width:1400px; margin:0 auto;">	
-			<h3 class="page_title"></h3>
-
-		</div>	
 	</section>	
 </div>
 <div id="footer">

@@ -29,7 +29,7 @@ public class MemberDAO {
 							rs.getString("id"),
 							rs.getString("pw"),
 							rs.getInt("birth"),
-							rs.getString("adrress"),
+							rs.getString("address"),
 							rs.getString("tel"));
 					memList.add(mem);
 				}
@@ -56,7 +56,7 @@ public class MemberDAO {
 					mem.setId(rs.getString("id"));
 					mem.setPw(rs.getString("pw"));
 					mem.setBirth(rs.getInt("birth"));
-					mem.setAddress(rs.getString("adrress"));
+					mem.setAddress(rs.getString("address"));
 					mem.setTel(rs.getString("tel"));
 				}
 				
@@ -75,14 +75,59 @@ public class MemberDAO {
 		try {
 			con = mysql.connect();
 			pstmt = con.prepareStatement(SqlLang.INS_MEMBER);
+			pstmt.setString(1, mem.getName());
+			pstmt.setString(2, mem.getId());
+			pstmt.setString(3, mem.getPw());
+			pstmt.setInt(4, mem.getBirth());
+			pstmt.setString(5, mem.getAddress());
+			pstmt.setString(6, mem.getTel());
+			cnt = pstmt.executeUpdate();
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
+		} finally {
+			mysql.close(con, pstmt);
 		}
 		return cnt;
 	}
 	
-		
+	public int upMember(Member mem) {
+		int cnt = 0;
+		MySQLDB mysql = new MySQLDB();
+		try {
+			con = mysql.connect();
+			pstmt = con.prepareStatement(SqlLang.UPD_MEMBER);
+			pstmt.setString(1, mem.getName());
+			pstmt.setString(2, mem.getId());
+			pstmt.setString(3, mem.getPw());
+			pstmt.setInt(4, mem.getBirth());
+			pstmt.setString(5, mem.getAddress());
+			pstmt.setString(6, mem.getTel());
+			cnt = pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			mysql.close(con, pstmt);
+		}
+		return cnt;
 	}
+	
+	public int memberOut(String id) {
+		int cnt = 0;
+		MySQLDB mysql = new MySQLDB();
+		
+		try {
+			con = mysql.connect();
+			pstmt = con.prepareStatement(SqlLang.DEL_MEMBER);
+			pstmt.setString(1, id);
+			cnt = pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			mysql.close(con, pstmt);
+		}
+		return cnt;
+	}
+}
 
 

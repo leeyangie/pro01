@@ -12,8 +12,8 @@
 <style>
 .container { width:1400px; }
 .page { clear:both; height:100vh; }
-#page1 { background-color:#ececec; }
-#page2 { background-color:#42bcf5; }
+#page1 { background-color:#f7f7f2; }
+#page2 { background-color:#2d3619; }
 .page_title { font-size:36px; padding-top:2em; text-align:center; }
 th.item1 { width:8%; }
 th.item2 { width:60%; }
@@ -59,10 +59,12 @@ th.item3 { width:20%; }
 				</table>
 				<hr>
 				<div class="btn-group">
+				<c:if test="${sid.equals('admin') }">
 				  <a href="${path0 }/notice/noti_ins.jsp" class="btn btn-secondary">글 등록</a>
 				  <a href="${path0 }/EditNotice.do?no=${noti.no }" class="btn btn-secondary">글 수정</a>
 				  <a href="${path0 }/DelNotice.do?no=${noti.no }" class="btn btn-secondary">글 삭제</a>
 				  <a href="${path0 }/NotiList.do" class="btn btn-secondary">글 목록</a>
+				 </c:if>
 				</div>
 			</div>
 		</div>

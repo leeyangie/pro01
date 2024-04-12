@@ -12,8 +12,8 @@
 <style>
 .container { width:1400px; }
 .page { clear:both; height:100vh; }
-#page1 { background-color:#ececec; }
-#page2 { background-color:#42bcf5; }
+#page1 { background-color:#f7f7f2; }
+#page2 { background-color:#2d3619; }
 .page_title { font-size:36px; padding-top:2em; text-align:center; }
 </style>
 </head>
@@ -44,7 +44,7 @@
 				</table>
 				<hr>
 				<div class="btn-group">
-				  <button type="submit" class="btn btn-secondary">글 등록</button>
+				  <button type="submit" class="btn btn-dark">글 등록</button>
 				  <a href="${path0 }/NotiList.do" class="btn btn-secondary">글 목록</a>
 				</div>
 			</form>

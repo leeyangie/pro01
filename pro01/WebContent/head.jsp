@@ -6,7 +6,7 @@
 <script src="${ipath }/js/jquery-3.2.1.min.js"></script>
 <link rel="stylesheet" href="${ipath }/css/bootstrap.min.css" />
 <script src="${ipath }/js/bootstrap.min.js"></script>
-
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="subject" content="우이동 소개(Uidong Introduction)">
 <meta name="description" content="우이동, 북한산, 자연, 4.19민주묘지, 공원, 맛집, 주요 생활시설">
@@ -19,3 +19,4 @@
 <meta property="og:url" content="https://301lab.com"/>
 <meta property="og:image" content="${ipath }imagie/site.png"/>
 <meta property="og:description" content="우이동, 북한산, 자연, 4.19민주묘지, 솔밭공원, 우이동맛집, 우이동 주요 생활시설">
+<link rel="stylesheet" href="${ipath }/css/common.css" />
