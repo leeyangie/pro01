@@ -13,8 +13,10 @@
 <style>
 .container { width:100% }
 .page { clear:both; height:100vh; }
+#page1 {display:block; width:100%; min-width:1000px; height:800px; }
 #page1 { background-color:#f7f7f2; }
 #page2 { background-color:#04331c; }
+
 .page_title { font-size:36px; padding-top:2em; text-align:center; }
 </style>
 </head>
@@ -32,7 +34,7 @@
 	  </ol>
 	  <div class="carousel-inner">
 	    <div class="carousel-item active">
-	      <img class="d-block w-100" src="${path0 }/images/2795083_image2_1.jpg" alt="First slide">
+	      <img class="d-block w-100" src="${path0 }/images/2795083_image2_1_Image Enhancer.jpg" alt="First slide">
 	    </div>
 	    <div class="carousel-item">
 	      <img class="d-block w-100" src="${path0 }/images/419image.jpg" alt="Second slide">
@@ -51,7 +53,6 @@
 	  </a>
 	</div>
 		<div style="width:100%; margin:0 auto;">
-			<h3 class="page_title">제작자 : ${author }</h3>
 		</div>
 	</section>
 	<section class="page" id="page2">
