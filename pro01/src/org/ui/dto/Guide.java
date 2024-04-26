@@ -5,19 +5,19 @@ public class Guide {
 	private String ptype;
 	private String paddress;
 	private String ptel;
-	private String pgps;
+	private String optime;
 	private String pcomment;
 	private String premark;
 	
 	public Guide() {}
-	public Guide(String pname, String ptype, String paddress, String ptel, String pgps, String pcomment,
+	public Guide(String pname, String ptype, String paddress, String ptel, String optime, String pcomment,
 			String premark) {
 		super();
 		this.pname = pname;
 		this.ptype = ptype;
 		this.paddress = paddress;
 		this.ptel = ptel;
-		this.pgps = pgps;
+		this.optime = optime;
 		this.pcomment = pcomment;
 		this.premark = premark;
 	}
@@ -63,13 +63,13 @@ public class Guide {
 	}
 
 
-	public String getPgps() {
-		return pgps;
+	public String getOptime() {
+		return optime;
 	}
 
 
-	public void setPgps(String pgps) {
-		this.pgps = pgps;
+	public void setOptime(String optime) {
+		this.optime = optime;
 	}
 
 
@@ -95,8 +95,8 @@ public class Guide {
 
 	@Override
 	public String toString() {
-		return "Guide [pname=" + pname + ", ptype=" + ptype + ", paddress=" + paddress + ", ptel=" + ptel + ", pgps="
-				+ pgps + ", pcomment=" + pcomment + ", premark=" + premark + "]";
+		return "Guide [pname=" + pname + ", ptype=" + ptype + ", paddress=" + paddress + ", ptel=" + ptel + ", optime="
+				+ optime + ", pcomment=" + pcomment + ", premark=" + premark + "]";
 	}
 
 	

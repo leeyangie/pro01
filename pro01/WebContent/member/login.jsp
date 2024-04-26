@@ -10,8 +10,9 @@
 <title>${title }</title>
 <%@ include file="/head.jsp" %>
 <style>
+#header {font-family: 'SUIT Variable', sans-serif;}
 .container { width:1400px; }
-.page { clear:both; height:100vh; }
+.page { clear:both; height:100vh; font-family: 'SUIT Variable', sans-serif;}
 #page1 { background-color:#f7f7f2; }
 #page2 { background-color:#42bcf5; }
 .page_title { font-size:36px; padding-top:2em; text-align:center; }
